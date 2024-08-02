@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "정부기관 로고 대체",
+    "version": "1.0",
+    "description": "대한민국 정부기관 로고를 나무위키 로고로 대체합니다!",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "images/namuwiki.png"
+    }
+  }
+  
